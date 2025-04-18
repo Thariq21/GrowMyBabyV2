@@ -37,6 +37,7 @@ Memberikan solusi deteksi dini stunting yang terjangkau, mudah digunakan, dan da
     "weight": 3200.0,
     "height": 49.5
   }
+  ```
 - Usia anak dimasukkan secara manual di antarmuka web.
 - Analisis dilakukan berdasarkan standar WHO untuk mendeteksi kemungkinan stunting.
 
@@ -47,16 +48,19 @@ Memberikan solusi deteksi dini stunting yang terjangkau, mudah digunakan, dan da
 
 ##📝 Contoh Kode Penting
 Koneksi WiFi
+```c++
 WiFi.begin(ssid, password);
 while (WiFi.status() != WL_CONNECTED) {
   delay(1000);
   Serial.println("Connecting to WiFi...");
 }
+```
 
 ##Mengirim Data ke Server
+```c++
 String postData = "{\"weight\": " + String(weight) + ", \"height\": " + String(distance) + "}";
 http.POST(postData);
-
+```
 
 ##🚥 Indikator LED
 - LED Hijau: Data berhasil dikirim ke server
